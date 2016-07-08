@@ -1,0 +1,10 @@
+#ignore following file type
+*.swp
+*.swo
+#python
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
