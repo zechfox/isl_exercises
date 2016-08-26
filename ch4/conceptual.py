@@ -1,0 +1,21 @@
+print('Conceptual 1: put p(x) into p(x)/(1-p(x)), get the 4.2 same as 4.3')
+print('Conceptual 2: taking log of 4.12, will get 4.13')
+print('Conceptual 3: Firstly, get p(x) with density function has different variance, then taking log of it.')
+print('Conceptual 4: a. 10%, because ignore smaller than 0.05 and larger than 0.95')
+print('Conceptual 4: b. 1%, the reason same as answer a.')
+print('Conceptual 4: c. 10e-98%, the reason same as answer a.')
+print('Conceptual 4: d. large P will tremendously decrease available training observations')
+print('Conceptual 4: e. The length of the hypercube each side will short from 1 to 100. 0.1e(1/n)')
+print('Conceptual 5: a. we expect QDA perform better on training set due to QDA fit better on obeservation.\
+ And on test set, LDA perform better due to linear boundary. QDA will result overfit')
+print('Conceptual 5: b. QDA perform better both on training set and test set.')
+print('Conceptual 5: c. It\'s expect improve the prediction accuracy of QDA relative to LDA, because more example fit prediction well and offset varience.')
+print('Conceptual 5: d. False. QDA will get lower error rate on training set event model obey linear boundary, but QDA will cause overfit on linear boundary model and get high error rate.')
+print('Conceptual 6: a. 37.75%')
+print('Conceptual 6: b. 50 hours')
+print('Conceptual 7: Taking u0=0, u1=10, varience^2=36 into 4.12, get the probility is 75.2%')
+print('Conceptual 8: for KNN, K=1, the trainig error rate will be 0, because we select the nearest point in training set, and the point itself is the nearest point in training set.\
+So, the test error rate of 1NN is 36%. Choosing logistic regression is better due to low test error rate.')
+print('Conceptual 9: a. 27%')
+print('Conceptual 9: b. 0.19')
+
