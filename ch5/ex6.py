@@ -11,7 +11,7 @@ print('Exercise 6 ')
 
 #Question A
 print('(a) ')
-model = smf.logit(formula='default~income+balance', data=df)
+model = smf.glm(formula='default~income+balance', data=df)
 res = model.fit()
 print(res.summary())
 print((res.params))
@@ -21,8 +21,8 @@ print((res.params))
 print('(b) ')
 def boot_fn(dataSet, indexArray):
   frame = dataSet.iloc[indexArray, :]
-  logit_model = smf.logit(formula='default~income+balance', data=frame)
-  res = logit_model.fit()
+  glm_model = smf.glm(formula='default~income+balance', data=frame)
+  res = glm_model.fit()
   return res.params
 params = boot_fn(df, np.random.randint(10000, size=10000))
 #Question C
@@ -44,7 +44,7 @@ def boot(data, function, R):
     result = result.append(coef, ignore_index=True)
   return result
 
-result = boot(df, boot_fn, 100)
+result = boot(df, boot_fn, 1000)
 incomeStd = np.std(result['income'])
 balanceStd = np.std(result['balance'])
 print('income standard deviation is {incomeStd}'.format(incomeStd=incomeStd))
